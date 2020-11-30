@@ -16,7 +16,7 @@ class CreateNoticiasTable extends Migration
         Schema::create('noticias', function (Blueprint $table) {
             $table->id();
             $table->string('titulo_noticia');
-            $table->string('descricao_noticia');
+            $table->mediumText('descricao_noticia');
            
            
             $table->unsignedBigInteger('id_autor');

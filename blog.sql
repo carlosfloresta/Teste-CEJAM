@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Tempo de geração: 30-Nov-2020 às 05:31
+-- Tempo de geração: 30-Nov-2020 às 05:52
 -- Versão do servidor: 10.4.11-MariaDB
 -- versão do PHP: 7.4.6
 
@@ -80,13 +80,13 @@ CREATE TABLE `migrations` (
 --
 
 INSERT INTO `migrations` (`id`, `migration`, `batch`) VALUES
-(70, '2014_10_12_000000_create_users_table', 1),
-(71, '2014_10_12_100000_create_password_resets_table', 1),
-(72, '2019_08_19_000000_create_failed_jobs_table', 1),
-(73, '2020_11_27_233413_create_categorias_table', 1),
-(74, '2020_11_27_233505_create_autors_table', 1),
-(75, '2020_11_27_233526_create_noticias_table', 1),
-(76, '2020_11_29_183740_create_noticia_categorias_table', 1);
+(77, '2014_10_12_000000_create_users_table', 1),
+(78, '2014_10_12_100000_create_password_resets_table', 1),
+(79, '2019_08_19_000000_create_failed_jobs_table', 1),
+(80, '2020_11_27_233413_create_categorias_table', 1),
+(81, '2020_11_27_233505_create_autors_table', 1),
+(82, '2020_11_27_233526_create_noticias_table', 1),
+(83, '2020_11_29_183740_create_noticia_categorias_table', 1);
 
 -- --------------------------------------------------------
 
@@ -97,7 +97,7 @@ INSERT INTO `migrations` (`id`, `migration`, `batch`) VALUES
 CREATE TABLE `noticias` (
   `id` bigint(20) UNSIGNED NOT NULL,
   `titulo_noticia` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `descricao_noticia` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `descricao_noticia` mediumtext COLLATE utf8mb4_unicode_ci NOT NULL,
   `id_autor` bigint(20) UNSIGNED NOT NULL,
   `publicado` enum('sim','nao') COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT 'nao',
   `created_at` timestamp NULL DEFAULT NULL,
@@ -152,7 +152,7 @@ CREATE TABLE `users` (
 --
 
 INSERT INTO `users` (`id`, `name`, `email`, `email_verified_at`, `password`, `remember_token`, `created_at`, `updated_at`) VALUES
-(1, 'carlos', 'carlos@carlos', NULL, '$2y$10$4xZPD8MtTWflp0lLITrigu4YyDoZ304AcWibLpPP82lcFACQCF28e', NULL, '2020-11-30 05:26:33', '2020-11-30 05:26:33');
+(1, 'carlos', 'carlos@carlos', NULL, '$2y$10$XUikyU3Yxd0ce22mSfV2d.o95bwp.p4kXKrociJMQ9YJB.ksP7RFW', NULL, '2020-11-30 07:49:16', '2020-11-30 07:49:16');
 
 --
 -- Índices para tabelas despejadas
@@ -221,13 +221,13 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT de tabela `autors`
 --
 ALTER TABLE `autors`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT de tabela `categorias`
 --
 ALTER TABLE `categorias`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT de tabela `failed_jobs`
@@ -239,19 +239,19 @@ ALTER TABLE `failed_jobs`
 -- AUTO_INCREMENT de tabela `migrations`
 --
 ALTER TABLE `migrations`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=77;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=84;
 
 --
 -- AUTO_INCREMENT de tabela `noticias`
 --
 ALTER TABLE `noticias`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT de tabela `noticia_categorias`
 --
 ALTER TABLE `noticia_categorias`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT de tabela `users`
