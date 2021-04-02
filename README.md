@@ -27,6 +27,10 @@ Suba o banco de dados que está nesse arquivo (blog.sql), ou dentro da pasta do 
 ```bash
 Caso obte por gerar automaticamente o banco, execute o comando: artisan db:seed para gerar o login
 ```
+
+```bash
+Executar no cmd: composer install
+```
 ```bash
 Execute o servidor: php artisan serve
 ```
